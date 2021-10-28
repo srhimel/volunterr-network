@@ -1,0 +1,212 @@
+header{
+    padding: 30px 0;
+}
+header .logo img {
+    width: 200px;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    flex-wrap: wrap;
+}
+header nav .menu ul {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    align-items: center;
+}
+header nav .menu ul li:first-child a {
+    padding: 15px;
+    text-decoration: none;
+    color: #222;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all ease-in .2s;
+}
+header nav .menu ul li:nth-child(2) a {
+  padding: 15px;
+  text-decoration: none;
+  color: #222;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all ease-in .2s;
+}
+.active-header,
+header nav .menu ul li a:hover{
+    color: #177cff !important;
+}
+header nav .menu ul li button{
+    color: #fff;
+    padding: 14px 46px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in .2s;
+}
+header nav .menu ul li button.register{
+    background: #3F90FC;
+    margin-left: 10px;
+}
+header nav .menu ul li button.register:hover{
+    background: #177cff;
+}
+header nav .menu ul li button.admin{
+    background: #434141;
+}
+header nav .menu ul li button.admin:hover{
+    background: #292929;
+}
+.toggler {
+    width: 34px;
+    height: 30px;
+    position: relative;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    display: none;
+    outline-offset: 9px ;
+    
+}
+
+.toggler span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background: #434141;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+
+.toggler span:nth-child(even) {
+  left: 50%;
+}
+
+.toggler span:nth-child(odd) {
+  left:0px;
+}
+
+.toggler span:nth-child(1), .toggler span:nth-child(2) {
+  top: 0px;
+}
+
+.toggler span:nth-child(3), .toggler span:nth-child(4) {
+  top: 12px;
+}
+
+.toggler span:nth-child(5), .toggler span:nth-child(6) {
+  top: 24px;
+}
+
+.toggler.open span:nth-child(1),.toggler.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.toggler.open span:nth-child(2),.toggler.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.toggler.open span:nth-child(1) {
+  left: 4px;
+  top:7px;
+}
+
+.toggler.open span:nth-child(2) {
+  left: calc(50% - 4px);
+  top: 7px;
+}
+
+.toggler.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+.toggler.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+.toggler.open span:nth-child(5) {
+  left: 3px;
+  top: 17px;
+}
+
+.toggler.open span:nth-child(6) {
+  left: calc(50% - 3px);
+  top: 17px;
+}
+@media only screen and (max-width: 900px){
+    header nav .menu{
+        width: 100%;
+        position: relative;
+    }
+    header nav .menu::before{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    header nav .menu::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .toggler{
+        display: block;
+    }
+    header nav .menu ul {
+        display: block;
+        margin: 0;
+        padding: 0;
+        background: #fdfdfd;
+        width: 200px;
+        position: fixed;
+        padding: 15px;
+        box-sizing: border-box;
+        height: 100vh;
+        right: -210px;
+        box-shadow: 0px 2px 5px #afafaf;
+        transition: .25s ease-in-out;
+    }
+    header nav .menu ul li {
+        margin-bottom: 10px;
+    }
+    header nav .menu ul li:first-child a{
+        padding: 5px 0;
+        display: inline-block;
+    }
+    header nav .menu ul li:nth-child(2) a{
+        padding: 5px 0;
+        display: inline-block;
+    }
+    header nav .menu ul li button.register{
+      margin-top: 50px;
+        margin-left: 0 ;
+    }
+    header nav .menu ul li button{
+        width: 100%;
+    }
+    header nav .menu.active ul{
+        right: 0 !important;
+    }
+}

@@ -1,0 +1,78 @@
+.dashboard{
+    min-height: 100vh;
+}
+.dash-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 1.7rem;
+    
+}
+.dash-navigation{
+    min-height: 80vh;
+}
+.dash-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dash-navigation ul li a{
+    color: #222;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.dash-main {
+    background:#F8FAFC ;
+    padding: 0 20px;
+}
+.dash-main .table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+}
+.dash-main .table thead{
+    text-align: left;
+    background:#F8FAFC ;
+    padding: 20px;
+    border-radius: 1rem;
+    border: none;
+}
+
+.dash-main .table th{
+    padding: 10px ;
+    font-weight: 500;
+
+}
+.dash-main .table td{
+padding: 3px 10px;
+}
+.dash-main .table thead th:first-child{
+    border-radius: 10px 0  0 10px;
+}
+.dash-main .table thead th:last-child{
+    border-radius: 0  10px 10px 0;
+    text-align: center;
+}
+.dash-main .table tbody tr:first-child td{ 
+    padding-top: 10px;
+}
+.dash-main .table tbody td:last-child{
+    text-align: center;
+}
+.dash-main .table tbody td:last-child button{
+    background: #FF444A;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    margin: auto;
+    height: 30px;
+    font-size: 26px;
+    cursor: pointer;
+}

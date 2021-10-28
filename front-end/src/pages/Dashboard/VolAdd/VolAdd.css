@@ -1,0 +1,62 @@
+.form-inputs {
+    background: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2rem;
+}
+.add-event form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form-inputs input,
+.form-inputs textarea{
+    width: 100%;
+    padding: 7px;
+    box-sizing: border-box !important;
+    border: 1px solid #C9C9C9;
+    margin-top: 7px;
+    
+}
+.form-inputs  input[type="date"]{
+    padding: 4.5px !important; 
+}
+.add-event form input[type="submit"]{
+    margin-left: auto;
+    color: #fff;
+    padding: 10px 36px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in .2s;
+    background: #3F90FC;
+}
+.form-inputs button{
+    display: flex;
+    position: relative;
+    box-sizing: border-box;
+    background: #E5F3FF;
+border: 1px solid #0084FF;
+box-sizing: border-box;
+border-radius: 5px;
+padding: 4.5px 15px;
+margin-top: 7px;
+color: #0084FF;
+align-items: center;
+gap: .7rem;
+}
+.form-inputs button input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+.form-inputs button svg{
+    font-size: 20px;
+}
+.form-inputs label {
+    font-size: 14px;
+    font-weight: 500;
+}
